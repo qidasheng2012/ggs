@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ggs.user</groupId>
+        <artifactId>ggs-user-center</artifactId>
+        <version>1.0.0.RELEASE</version>
+    </parent>
+
+    <groupId>com.ggs.user.center.provider</groupId>
+    <artifactId>ggs-user-center-provider</artifactId>
+    <version>1.0.0.RELEASE</version>
+    <packaging>jar</packaging>
+    <description>用户服务provider</description>
+
+    <properties>
+        <model.version>1.0.0.RELEASE</model.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ggs.user.center.model</groupId>
+            <artifactId>ggs-user-center-model</artifactId>
+            <version>${model.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+
+
+</project>
