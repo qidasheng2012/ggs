@@ -13,21 +13,20 @@ public class ResultEntityUtil {
         return success(ResultCodeEnum.SUCCESS, data);
     }
 
-    public static ResultEntity success(ResultCodeEnum code, Object data) {
-        return new ResultEntity(code.getCode(), code.getDesc(), data);
+    public static ResultEntity success(ResultCodeEnum resultCodeEnum, Object data) {
+        return new ResultEntity(resultCodeEnum.getCode(), resultCodeEnum.getDesc(), data);
     }
 
-
-    public static ResultEntity error(ResultCodeEnum code) {
-        return error(code, null);
+    public static ResultEntity error(ResultCodeEnum resultCodeEnum) {
+        return error(resultCodeEnum, resultCodeEnum.getDesc());
     }
 
-    public static ResultEntity error(ResultCodeEnum code, String desc) {
-        return new ResultEntity(code.getCode(), desc, null);
+    public static ResultEntity error(ResultCodeEnum resultCodeEnum, String desc) {
+        return new ResultEntity(resultCodeEnum.getCode(), desc, null);
     }
 
-    public static ResultEntity error(ResultCodeEnum code, Object data) {
-        return new ResultEntity(code.getCode(), code.getDesc(), data);
+    public static ResultEntity error(ResultCodeEnum resultCodeEnum, Object data) {
+        return new ResultEntity(resultCodeEnum.getCode(), resultCodeEnum.getDesc(), data);
     }
 
 

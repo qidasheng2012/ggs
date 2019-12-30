@@ -23,4 +23,10 @@ public class UserController {
         List<User> userList = iUserService.list();
         return ResultEntityUtil.success(userList);
     }
+
+    @GetMapping("/fallBack")
+    public String fallBack() throws Exception {
+        // 模拟异常，看是否走熔断逻辑
+        throw new RuntimeException("fallBack error");
+    }
 }

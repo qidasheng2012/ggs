@@ -12,4 +12,7 @@ public interface UserApi {
 
     @GetMapping("/list")
     ResultEntity list();
+
+    @GetMapping("/fallBack")
+    String fallBack();
 }
