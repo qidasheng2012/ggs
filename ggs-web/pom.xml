@@ -3,32 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>ggs-user-center</artifactId>
-        <groupId>com.ggs.user</groupId>
+        <artifactId>ggs</artifactId>
+        <groupId>com.ggs</groupId>
         <version>1.0.0.RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ggs.user.center.web</groupId>
-    <artifactId>ggs-user-center-web</artifactId>
+    <groupId>com.ggs.web</groupId>
+    <artifactId>ggs-web</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.ggs.user.center.provider</groupId>
-            <artifactId>ggs-user-center-provider</artifactId>
-            <version>${providr.version}</version>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -39,7 +27,18 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ggs.user.center.facade</groupId>
+            <artifactId>ggs-user-center-facade</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
     </dependencies>
+
     <build>
         <resources>
             <resource>
@@ -59,22 +58,5 @@
                 <filtering>false</filtering>
             </resource>
         </resources>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.ggs.user.center.web.UserCenterWebApplication</mainClass>
-                    <includeSystemScope>true</includeSystemScope>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
     </build>
 </project>

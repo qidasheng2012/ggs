@@ -7,6 +7,7 @@
         <module>ggs-register-center</module>
         <module>ggs-common</module>
         <module>ggs-user-center</module>
+        <module>ggs-web</module>
     </modules>
 
     <groupId>com.ggs</groupId>

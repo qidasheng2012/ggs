@@ -1,0 +1,23 @@
+server:
+  port: 9901
+  servlet:
+    context-path: /web
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:11111/eureka/
+
+spring:
+  application.name: ggs-web
+  redis:
+    timeout: 10000
+    password: root
+    database: 0
+    port: 6379
+    host: 127.0.0.1
+    lettuce:
+      pool:
+        max-active: 8
+        min-idle: 0
+        max-wait: -1
+        max-idle: 8

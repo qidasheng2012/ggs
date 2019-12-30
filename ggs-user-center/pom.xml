@@ -8,6 +8,7 @@
         <module>ggs-user-center-model</module>
         <module>ggs-user-center-provider</module>
         <module>ggs-user-center-web</module>
+        <module>ggs-user-center-facade</module>
     </modules>
 
     <parent>
@@ -27,7 +28,7 @@
         <providr.version>1.0.0.RELEASE</providr.version>
         <skipTests>true</skipTests>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>com.baomidou</groupId>

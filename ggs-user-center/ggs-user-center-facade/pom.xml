@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ggs-user-center</artifactId>
+        <groupId>com.ggs.user</groupId>
+        <version>1.0.0.RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ggs.user.center.facade</groupId>
+    <artifactId>ggs-user-center-facade</artifactId>
+    <description>服务接口</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ggs.user.center.model</groupId>
+            <artifactId>ggs-user-center-model</artifactId>
+            <version>${model.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.github.openfeign.form</groupId>
+                    <artifactId>feign-form-spring</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+</project>
