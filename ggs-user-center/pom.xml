@@ -5,14 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <modules>
+        <module>ggs-user-center-model</module>
         <module>ggs-user-center-provider</module>
         <module>ggs-user-center-web</module>
-        <module>ggs-user-center-model</module>
     </modules>
 
     <parent>
-        <artifactId>ggs</artifactId>
         <groupId>com.ggs</groupId>
+        <artifactId>ggs</artifactId>
         <version>1.0.0.RELEASE</version>
     </parent>
 
@@ -22,4 +22,17 @@
     <description>用户中心</description>
     <packaging>pom</packaging>
 
+    <properties>
+        <model.version>1.0.0.RELEASE</model.version>
+        <providr.version>1.0.0.RELEASE</providr.version>
+        <skipTests>true</skipTests>
+    </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+    </dependencies>
 </project>

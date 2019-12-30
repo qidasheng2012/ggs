@@ -14,10 +14,6 @@
     <version>1.0.0.RELEASE</version>
     <packaging>jar</packaging>
 
-    <properties>
-        <common.version>1.0.0.RELEASE</common.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.ggs.common</groupId>

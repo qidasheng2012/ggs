@@ -15,10 +15,6 @@
     <packaging>jar</packaging>
     <description>用户服务provider</description>
 
-    <properties>
-        <model.version>1.0.0.RELEASE</model.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.ggs.user.center.model</groupId>
@@ -27,17 +23,10 @@
         </dependency>
 
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.2.0</version>
-        </dependency>
-
-        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
     </dependencies>
-
 
 </project>

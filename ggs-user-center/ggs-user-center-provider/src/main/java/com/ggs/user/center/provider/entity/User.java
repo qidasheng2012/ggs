@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("t_user")
+@TableName("user")
 public class User implements Serializable {
     /**
      * 主键id
