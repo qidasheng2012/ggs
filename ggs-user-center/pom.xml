@@ -4,13 +4,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <modules>
-        <module>ggs-user-center-model</module>
-        <module>ggs-user-center-provider</module>
-        <module>ggs-user-center-web</module>
-        <module>ggs-user-center-facade</module>
-    </modules>
-
     <parent>
         <groupId>com.ggs</groupId>
         <artifactId>ggs</artifactId>
@@ -20,8 +13,15 @@
     <groupId>com.ggs.user</groupId>
     <artifactId>ggs-user-center</artifactId>
     <version>1.0.0.RELEASE</version>
-    <description>用户中心</description>
     <packaging>pom</packaging>
+    <description>ggs-用户中心</description>
+
+    <modules>
+        <module>ggs-user-center-model</module>
+        <module>ggs-user-center-provider</module>
+        <module>ggs-user-center-web</module>
+        <module>ggs-user-center-facade</module>
+    </modules>
 
     <properties>
         <model.version>1.0.0.RELEASE</model.version>

@@ -25,7 +25,7 @@ public class UserController {
     }
 
     @GetMapping("/fallBack")
-    public String fallBack() throws Exception {
+    public ResultEntity fallBack() throws Exception {
         // 模拟异常，看是否走熔断逻辑
         throw new RuntimeException("fallBack error");
     }

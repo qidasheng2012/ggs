@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>com.ggs.user</groupId>
         <artifactId>ggs-user-center</artifactId>
@@ -13,7 +14,7 @@
     <artifactId>ggs-user-center-provider</artifactId>
     <version>1.0.0.RELEASE</version>
     <packaging>jar</packaging>
-    <description>用户服务provider</description>
+    <description>ggs-用户服务-provider</description>
 
     <dependencies>
         <dependency>

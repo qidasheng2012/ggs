@@ -2,6 +2,7 @@ package com.ggs.web.controller;
 
 import com.ggs.common.utils.result.ResultCodeEnum;
 import com.ggs.common.utils.result.ResultEntity;
+import com.ggs.common.utils.result.ResultEntityUtil;
 import com.ggs.user.center.facade.api.UserApi;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,12 +24,12 @@ public class UserController {
 
     @GetMapping("/fallBack")
     @HystrixCommand(fallbackMethod = "userFallBack")
-    public String fallBack(){
+    public ResultEntity fallBack(){
         return userApi.fallBack();
     }
 
-    public String userFallBack() {
-        return ResultCodeEnum.USER_FEIGN_ERROR.getDesc();
+    public ResultEntity userFallBack() {
+        return ResultEntityUtil.error(ResultCodeEnum.USER_FEIGN_ERROR);
     }
 
 }

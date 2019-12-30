@@ -3,19 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <modules>
-        <module>ggs-register-center</module>
-        <module>ggs-common</module>
-        <module>ggs-user-center</module>
-        <module>ggs-web</module>
-    </modules>
-
-    <groupId>com.ggs</groupId>
-    <artifactId>ggs</artifactId>
-    <version>1.0.0.RELEASE</version>
-    <name>ggs</name>
-    <description>ggs项目</description>
-    <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -23,6 +10,19 @@
         <version>2.1.10.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
+    <groupId>com.ggs</groupId>
+    <artifactId>ggs</artifactId>
+    <version>1.0.0.RELEASE</version>
+    <packaging>pom</packaging>
+    <description>ggs 项目</description>
+
+    <modules>
+        <module>ggs-register-center</module>
+        <module>ggs-common</module>
+        <module>ggs-user-center</module>
+        <module>ggs-web</module>
+    </modules>
 
     <properties>
         <java.version>1.8</java.version>
@@ -50,4 +50,20 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

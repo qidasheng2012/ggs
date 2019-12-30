@@ -14,5 +14,5 @@ public interface UserApi {
     ResultEntity list();
 
     @GetMapping("/fallBack")
-    String fallBack();
+    ResultEntity fallBack();
 }
