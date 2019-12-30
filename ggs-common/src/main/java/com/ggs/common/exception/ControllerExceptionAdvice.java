@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * 全局异常类
  */
-@ControllerAdvice
 @Slf4j
+@ControllerAdvice
 public class ControllerExceptionAdvice {
 
     /**

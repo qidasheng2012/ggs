@@ -12,6 +12,7 @@
     <groupId>com.ggs.user.center.model</groupId>
     <artifactId>ggs-user-center-model</artifactId>
     <version>1.0.0.RELEASE</version>
+    <description>用户中心-model</description>
     <packaging>jar</packaging>
 
     <dependencies>

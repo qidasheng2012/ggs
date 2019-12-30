@@ -6,9 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * @author
- */
 @Data
 @Builder
 @NoArgsConstructor
@@ -24,8 +21,8 @@ public class UserKey extends BaseKey {
     private String name;
 
     /**
-     * 状态0无效，1有效，9删除
+     * 年龄
      */
-    private Integer state;
+    private Integer age;
 
 }

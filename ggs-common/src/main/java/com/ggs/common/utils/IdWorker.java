@@ -1,5 +1,7 @@
 package com.ggs.common.utils;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -10,6 +12,7 @@ import java.util.Random;
  * 调用示例2：IdWorker.getDateId() 返回24位 String 类型的ID 如190505131099260681719810
  * getId() 连续自增的数字（不一定完全自增，偶尔中间会隔开）
  */
+@Slf4j
 public class IdWorker {
 
     private static IdWorker idWorker = new IdWorker(2, 1);
@@ -25,11 +28,11 @@ public class IdWorker {
        for (int i = 0; i < 100; i++) {
             String id = getId();
             //long id = idWorker.nextId();
-            System.out.println("getId:"+ id  + " , length:" + id.length());
+            log.info("getId: [{}] , length: [{}]", getId(), getId().length());
         }*/
-        System.out.println("getId:" + getId() + " , length:" + getId().length());
-        System.out.println("getDateId:" + getDateId() + " , length:" + getDateId().length());
-        System.out.println("getFullDateId:" + getFullDateId() + " , length:" + getFullDateId().length());
+        log.info("getId: [{}] , length: [{}]", getId(), getId().length());
+        log.info("getDateId: [{}], length: [{}]", getDateId(), getDateId().length());
+        log.info("getFullDateId: [{}] , length: [{}]", getFullDateId(), getFullDateId().length());
     }
 
     /**

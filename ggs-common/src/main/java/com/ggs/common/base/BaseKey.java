@@ -1,12 +1,10 @@
 package com.ggs.common.base;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.io.Serializable;
 
-@Getter
-@Setter
+@Data
 public abstract class BaseKey implements Serializable {
 
     protected Integer pageNo = 0;

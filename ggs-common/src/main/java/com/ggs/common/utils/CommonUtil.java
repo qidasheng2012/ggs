@@ -2,8 +2,6 @@ package com.ggs.common.utils;
 
 import com.ggs.common.base.BaseKey;
 import com.ggs.common.contants.PageConstant;
-import com.ggs.common.page.PageInfoVo;
-import com.github.pagehelper.PageInfo;
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -39,25 +37,6 @@ public class CommonUtil {
             key.setPageNo(PageConstant.DEF_PAGE);
         if (Objects.isNull(key.getPageSize()))
             key.setPageSize(PageConstant.DEF_SIZE);
-    }
-
-    public static <T, E> PageInfoVo<E> pageInfo2Vo(PageInfo<T> infos, Function<? super T, ? extends E> mapper) {
-        PageInfoVo<E> infoVo = new PageInfoVo();
-        infoVo.setTotal(infos.getTotal());
-        if (Objects.isNull(infos) || CollectionUtils.isEmpty(infos.getList()))
-            return infoVo;
-        List<E> list = infos.getList().stream().map(mapper).collect(Collectors.toList());
-        infoVo.setList(list);
-        return infoVo;
-    }
-
-    public static <T> PageInfoVo<T> pageInfo2Vo(PageInfo<T> infos) {
-        PageInfoVo<T> infoVo = new PageInfoVo();
-        infoVo.setTotal(infos.getTotal());
-        if (Objects.isNull(infos) || CollectionUtils.isEmpty(infos.getList()))
-            return infoVo;
-        infoVo.setList(infos.getList());
-        return infoVo;
     }
 
     public static <T, E> List<E> Info2Vo(List<T> infos, Function<? super T, ? extends E> mapper) {

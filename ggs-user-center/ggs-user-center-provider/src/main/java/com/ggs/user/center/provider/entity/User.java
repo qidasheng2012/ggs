@@ -28,8 +28,8 @@ public class User implements Serializable {
     private String name;
 
     /**
-     * 状态：0无效，1有效，9删除
+     * 年龄
      */
-    private Byte state;
+    private Integer age;
 
 }
